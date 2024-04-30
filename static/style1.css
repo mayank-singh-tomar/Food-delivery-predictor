@@ -1,0 +1,186 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('food.jpg');
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+   
+    height: 100vh;
+}
+
+
+nav ul li:hover {background-color: #f9451d;}
+  
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.756); /* Add a semi-transparent white background to the container */
+    border-radius: 20px;
+}
+
+.aboutus p {
+    margin: 0%;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5;
+    font-size: 1.05rem;
+    padding: 10px;
+}
+
+/* Header styles */
+header {
+    position: fixed; /* Make the header/navbar fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Take the full width of the viewport */
+    z-index: 1000; /* Set a high z-index to ensure it appears above other content */
+    background-color: rgb(255, 99, 99); /* Semi-transparent red background for the header */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section styles */
+.section {
+    padding: 50px 0;
+    text-align: center; /* Center text within sections */
+}
+
+.section h2 {
+    margin-bottom: 30px;
+}
+
+/* Team member styles */
+.team-member {
+    margin-bottom: 40px;
+    display: inline-block; /* Display team members side by side */
+    vertical-align: top; /* Align items to the top to avoid extra spacing */
+    width: calc(25% - 20px); /* Set the width of each team member box */
+    margin-right: 20px; /* Add some spacing between team members */
+    box-sizing: border-box; /* Include padding and borders in the element's total width */
+    text-align: center; /* Center the content horizontally */
+}
+
+.team-member:last-child {
+    margin-right: 0; /* Remove right margin for the last team member */
+}
+
+.team-member-info {
+    display: flex;
+    flex-direction: column; /* Side-by-side layout by default */
+    align-items: center; /* Center items vertically */
+}
+
+.member-image {
+    margin-right: 10px;
+}
+
+.member-image img {
+    max-width: 100%; /* Set the width to 100% */
+    height: 135px; /* Maintain aspect ratio */
+    border-radius: 100%; /* Display image as a circle */
+    overflow: hidden; /* Ensure image doesn't overflow the circle */
+    cursor: pointer;
+}
+
+.member-details {
+    
+    text-align: left; /* Align text to the left */
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.071);
+}
+
+.team-member h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.team-member h4 {
+    font-size: 1.05rem; /* Corrected the h4 font size */
+}
+
+.team-member p {
+    margin-bottom: 10px;
+}
+
+.team-member a {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Form styles */
+form label,
+form input,
+form textarea,
+form button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form label {
+    text-align: left; /* Align labels to the left */
+    width: 100%; /* Make labels take full width */
+    font-weight: bold; /* Optionally, make labels bold for emphasis */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #f44646;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #eb0404;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .team-member {
+        width: calc(33.33% - 20px); /* Set width to 33.33% for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    .team-member {
+        width: calc(50% - 20px); /* Set width to 50% for even smaller screens */
+    }
+}

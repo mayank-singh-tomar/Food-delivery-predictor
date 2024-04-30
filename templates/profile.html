@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+               <li> <a href="{{ url_for('index') }}">Home</a></li>
+        </nav>
+        
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="aboutus">
+                <p>Our food delivery tracking website is a seamless platform designed to revolutionize the way customers experience food delivery. As developers, we've meticulously crafted every aspect of the site to ensure efficiency, accuracy, and user satisfaction. From real-time order tracking to intuitive navigation, we've integrated cutting-edge technologies and robust backend systems to streamline the entire delivery process. Our commitment to excellence drives us to continually enhance the website's performance, security, and features, ensuring that our users always have a delightful and hassle-free experience.</p>
+            </div>
+        </div>
+    
+    </section>
+
+    <section id="team" class="section">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+
+            <div class="team-member">
+                <div class="team-member-info">
+                    <div class="member-image">
+                        <img src="/static/pic3.png" alt="Mayank">
+                    </div>
+                    <div class="member-details">
+                        <h3>Mayank Singh Tomar</h3>
+                        <h4>Frontend Developer & DBMS</h4>
+                        <p>Computer Science and Engineering</p>
+                        <a href="https://www.linkedin.com/in/mayanksingh921/"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
+                        <a  href="#" >
+                            <i style="font-size:24px" class="fa">&#xf09b;</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member-info">
+                    <div class="member-image">
+                        <img src="/static/pic1.png" alt="Aakash">
+                    </div>
+                    <div class="member-details">
+                        <h3>Aakash Kumar</h3>
+                        <h4>Backend Developer</h4>
+                        <p>Computer Science and Engineering</p>
+                        <a  href="https://www.linkedin.com/in/aakash-kumar-aa0b591b8/" >
+                            <i style="font-size:24px" class="fa">&#xf08c;</i> 
+                        </a>
+                        <a  href="#" >
+                            <i style="font-size:24px" class="fa">&#xf09b;</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member-info">
+                    <div class="member-image">
+                        <img src="/static/pic2.png" alt="Rijwith">
+                    </div>
+                    <div class="member-details">
+                        <h3>Rijwith Mamidi</h3>
+                        <h4>Frontend Developer</h4>
+                        <p>Computer Science and Engineering</p>
+                        <a href="https://www.linkedin.com/in/rijwith-mamidi/"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
+                        <a  href="#" >
+                            <i style="font-size:24px" class="fa">&#xf09b;</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-info">
+                    <div class="member-image">
+                        <img src="/static/pic5.png" alt="Sonal">
+                    </div>
+                    <div class="member-details">
+                        <h3>Sonal Kumari</h3>
+                        <h4>ML Team</h4>
+                        <p>Computer Science and Engineering</p>
+                        <a href="https://www.linkedin.com/in/sonal-kumari-23a35b255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
+                        <a  href="#" >
+                            <i style="font-size:24px" class="fa">&#xf09b;</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="team-member">
+                <div class="team-member-info">
+                    <div class="member-image">
+                        <img src="/static/pic4.png" alt="Deependra">
+                    </div>
+                    <div class="member-details">
+                        <h3>Deependra Shukla</h3>
+                        <h4>ML Team</h4>
+                        <p>Computer Science and Engineering</p>
+                        <a href="https://www.linkedin.com/in/deependra-shukla-b27557255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
+                        <a  href="#" >
+                            <i style="font-size:24px" class="fa">&#xf09b;</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="orderForm" method="post" action="send_email.py">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; FoodieDelivery. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

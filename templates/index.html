@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>FoodieDelivery</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ <style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+   
+   * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+   }
+   
+   body {
+     font-family: 'Poppins', sans-serif;
+     line-height: 1.6;
+   }
+   
+   header {
+     background-color: #ff6347;
+     padding: 0.8rem;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   }
+   
+   nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1200px;
+     margin: 0 auto;
+   }
+   
+   .logo img {
+     height: 60px;
+   }
+   
+   .nav-links a {
+     color: #fff;
+     text-decoration: none;
+     padding: 0.5rem 1rem;
+     border-radius: 5px;
+     transition: background-color 0.3s ease;
+     margin-left: 1rem;
+   }
+   
+   .nav-links a:hover {
+     background-color: #4c170e;
+   }
+   
+   .hero {
+     background-image:url('static/ba_img.jpg');
+     background-size: cover;
+     background-position: center;
+     height: 500px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     color: #fff;
+   }
+   
+   .btn {
+     display: inline-block;
+     background-color: #ff6347;
+     color: #fff;
+     text-decoration: none;
+     padding: 1rem 2rem;
+     border-radius: 5px;
+     transition: background-color 0.3s ease;
+     margin-top: 1rem;
+   }
+   
+   .btn:hover {
+     background-color: #581205;
+   }
+   
+   .featured-items {
+     max-width: 1200px;
+     margin: 2rem auto;
+     padding: 2rem;
+   }
+   
+   .featured-items h2 {
+     text-align: center;
+     margin-bottom: 2rem;
+   }
+   
+   .item-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 2rem;
+   }
+   
+   .item {
+     background-color: #f9f9f9;
+     padding:1rem;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     text-align: center;
+     overflow: hidden;
+   }
+   
+   .item img {
+     width: 100%;
+     max-height: 200px;
+     object-fit: cover;
+     border-radius: 5px;
+     transition: transform 0.3s ease;
+   }
+   
+   .item:hover img {
+     transform: scale(1.8);
+   }
+   
+   
+  
+   footer {
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     padding: 1rem;
+     text-align: right;
+     padding: 40;
+   }
+
+   #search-form {
+     display: flex;
+     align-items: center;
+   }
+
+   #location-input {
+     flex: 1;
+     padding: 0.5rem;
+     margin-right: 0.5rem;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+   }
+
+   button {
+     padding: 0.5rem 1rem;
+     background-color: #ff6347;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     /* cursor: pointer; */
+     transition: background-color 0.3s ease;
+   }
+
+   button:hover {
+     background-color: #571e11;
+   }
+
+   /* Responsive Styles */
+   @media (max-width: 768px) {
+     .hero {
+       height: 400px;
+     }
+   
+     .hero h1 {
+       font-size: 2rem;
+     }
+   
+     .item-grid {
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     }
+   }
+ </style>
+</head>
+<body>
+ <header>
+   <nav>
+     <div class="logo">
+       <img src="static/f_logo2.jpeg" alt="FoodieDelivery"></a>
+     </div>
+     <div class="nav-links">
+       <a href="#featured-items">Dashboard</a>
+       <a href="developers" id="profile">Profile</a>
+     </div>
+   </nav>
+ </header>
+
+ <main>
+   <section class="hero">
+     <form action="/location" id="search-form">
+       <input type="text" id="location-input" placeholder="Enter your location">
+       <button type="submit">Search</button>
+     </form>
+   </section>
+   <section class="featured-items">
+     <h2>Featured Items</h2>
+     <div class="item-grid">
+       <div class="item">
+         <img src="static/food1_img.jpg" alt="Item 1">
+         <h3>Mix</h3>
+         <p>Rs.342 /-</p>
+         <a href="order.html" class="btn">Order Now</a>
+       </div>
+       <div class="item">
+         <img src="static/food_online.png" alt="Item 2">
+         <h3>Margrita Pizza</h3>
+         <p>Description of Item 1</p>
+         <p>Rs.199 /-</p>
+         <a href="order.html" class="btn">Order Now</a>
+       </div>
+       <div class="item">
+         <img src="static/salad1.jpg" alt="Item 3">
+         <h3>Onion Fries</h3>
+         <p>Description of Item 1</p>
+         <p>Rs.105 /-</p>
+         <a href="order.html" class="btn">Order Now</a>
+       </div>
+       <div class="item">
+         <img src="static/burger.jpg" alt="Item 4">
+         <h3>Turkey Burger</h3>
+         <p>Description of Item 1</p>
+          <p>Rs.398 /-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="item">
+          <img src="static/variety.webp" alt="Item 5">
+          <h3>Fries and all mix</h3>
+          <p>Description of Item 1</p>
+          <p>Rs.449 /-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="item">
+          <img src="static/weekend_special.avif" alt="Item 6">
+          <h3>Weekend Special</h3>
+          <p>Description of Item 1</p>
+          <p>Rs.249 /-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="item">
+          <img src="static/boiled_sweets.jpg" alt="Item 7">
+          <h3>Tangies</h3>
+          <p>Description of Item 1</p>
+          <p>Rs.50 /-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="item">
+          <img src="static/Reverie_Social_Table.jpg.webp" alt="Item 8">
+          <h3>Special dish</h3>
+          <p>Description of Item 1</p>
+          <p>Rs.321/-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="item">
+          <img src="static/Nonveg.webp" alt="Item 9">
+          <h3>Chillies</h3>
+          <p>Description of Item 1</p>
+          <p>Rs.216 /-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="item">
+          <img src="static/Moon_Rabbit_dish_3.jpg.webp" alt="Item 10">
+          <h3>Moon Rabbit dish</h3>
+          <p>Description of Item 1</p>
+          <p>Rs.341 /-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        <div class="item">
+          <img src="static/aalo_tikki.webp" alt="Item 11">
+          <h3>Salad Mix</h3>
+          <p>Description of Item 1</p>
+          <p>Rs.256 /-</p>
+          <a href="order.html" class="btn">Order Now</a>
+        </div>
+        
+      </div>
+    </section> 
+  </main>
+
+  <footer>
+    <div style="text-align: center;">
+    <p>&copy; FoodieDelivery</p>
+  </div>
+    <p>Contact Us :</p><br>
+    <a href="mailto:feedbackfoodie3@gmail.com"><img src="static/gmail.png" alt="Email Logo" width="50" height="50"></a>
+
+    <a href="https://www.instagram.com"><img src="static/instagram.png" alt="Instagram Logo" width="50" height="50"></a>
+
+    <a href="https://www.facebook.com"><img src="static/facebook.png" alt="email Logo" width="50" height="50"></a>
+  </footer>
+
+</body>
+</html>
