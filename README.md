@@ -105,13 +105,11 @@ Using these inputs, the trained machine learning model predicts the estimated de
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/food-delivery-time-predictor.git
+git clone https://github.com/mayank-singh-tomar/Food-delivery-predictor.git
 
 cd food-delivery-time-predictor
 
-pip install -r requirements.txt
-
-python app.py
+python main.py
 ```
 
 ---
