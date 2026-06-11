@@ -1,31 +1,157 @@
-**Welcome to our Food Delivery Time Predictor Website!**
+# 🍔 Food Delivery Time Predictor
 
-*What is this?*
+## Overview
 
-This website predicts how long it will take for your food to arrive when you order online. It gives you an estimate so you can plan your day better!
+Food Delivery Time Predictor is a Machine Learning web application that estimates the expected delivery time of food orders based on various factors related to the delivery person, restaurant location, customer location, weather conditions, traffic density, and order details.
 
+The goal of this project is to help food delivery platforms and customers obtain accurate delivery time predictions, leading to better planning, improved customer satisfaction, and optimized delivery operations.
 
-*How does it work?*
+---
 
-We use clever algorithms and data from past deliveries to guess how long your food will take to get to you. We take into account things like distance, time of day, and how busy the restaurant is.
+## Features
 
+* Predicts food delivery time in minutes.
+* Uses real-world delivery and location-based factors.
+* Considers weather and traffic conditions.
+* Easy-to-use web interface.
+* Data-driven predictions using Machine Learning algorithms.
 
-*How to use it?*
+---
 
-1. Enter your location and the restaurant you're ordering from.
-2. We'll give you an estimated time for your delivery.
-3. Sit back, relax, and wait for your delicious meal to arrive!
+## Dataset Features
 
-   
-*Why should you trust us?*
+The model uses the following input features:
 
-We're constantly improving our predictions based on feedback and new data. While we can't guarantee the exact time, we do our best to give you a good estimate.
+| Feature                     | Description                        |
+| --------------------------- | ---------------------------------- |
+| ID                          | Unique order identifier            |
+| Delivery_person_ID          | Unique delivery partner identifier |
+| Delivery_person_Age         | Age of delivery person             |
+| Delivery_person_Ratings     | Average rating of delivery person  |
+| Restaurant_latitude         | Restaurant latitude coordinate     |
+| Restaurant_longitude        | Restaurant longitude coordinate    |
+| Delivery_location_latitude  | Customer latitude coordinate       |
+| Delivery_location_longitude | Customer longitude coordinate      |
+| Order_Date                  | Date of order                      |
+| Time_Orderd                 | Time when order was placed         |
+| Time_Order_picked           | Time when order was picked up      |
+| Weatherconditions           | Weather during delivery            |
+| Road_traffic_density        | Traffic density level              |
+| Vehicle_condition           | Condition of delivery vehicle      |
+| Type_of_order               | Type of food order                 |
+| Type_of_vehicle             | Vehicle used for delivery          |
+| Multiple_deliveries         | Number of simultaneous deliveries  |
+| Festival                    | Festival indicator (Yes/No)        |
+| City                        | Delivery city category             |
 
+### Target Variable
 
-*Have feedback or questions?*
+| Feature         | Description                     |
+| --------------- | ------------------------------- |
+| Time_taken(min) | Actual delivery time in minutes |
 
-We'd love to hear from you! Send us a message if you have any suggestions or if something isn't working right.
+---
 
-Enjoy your meal!
-Thanks for using our website. We hope it helps make your food ordering experience even better!
+## How It Works
 
+The prediction model analyzes multiple factors that influence delivery duration, including:
+
+* Distance between restaurant and customer
+* Traffic conditions
+* Weather conditions
+* Delivery partner experience and ratings
+* Vehicle type and condition
+* Number of ongoing deliveries
+* City and festival impact
+* Order and pickup timings
+
+Using these inputs, the trained machine learning model predicts the estimated delivery time for a new order.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+
+### Backend
+
+* Python
+* Flask
+
+### Machine Learning
+
+* Pandas
+* NumPy
+* Scikit-learn
+
+---
+
+## Project Workflow
+
+1. Data Collection
+2. Data Cleaning and Preprocessing
+3. Feature Engineering
+4. Model Training
+5. Model Evaluation
+6. Deployment using Flask
+7. User Input and Prediction
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/your-username/food-delivery-time-predictor.git
+
+cd food-delivery-time-predictor
+
+pip install -r requirements.txt
+
+python app.py
+```
+
+---
+
+## Usage
+
+1. Open the application in your browser.
+2. Enter delivery details such as:
+
+   * Delivery Person Age
+   * Delivery Person Rating
+   * Weather Conditions
+   * Traffic Density
+   * Vehicle Type
+   * Restaurant Location
+   * Customer Location
+   * City and Festival Information
+3. Click **Predict**.
+4. The system will display the estimated delivery time in minutes.
+
+---
+
+## Future Improvements
+
+* Real-time traffic integration using Maps API.
+* Live weather data integration.
+* Deep Learning-based prediction models.
+* Route optimization recommendations.
+* Mobile application deployment.
+
+---
+
+## Conclusion
+
+This project demonstrates how Machine Learning can be applied to solve real-world logistics and delivery challenges. By analyzing delivery-related factors, the system provides accurate delivery time estimates that can help businesses improve operational efficiency and customer experience.
+
+---
+
+### Author
+
+**Mayank Singh Tomar**
+
+Food Delivery Time Predictor – Machine Learning Project
